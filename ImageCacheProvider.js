@@ -54,11 +54,11 @@ class ImageCacheProvider extends React.Component {
         };
     }
 
-    UNSAFE_componentWillMount() {
+    componentWillMount() {
         this.preloadImages(this.props.urlsToPreload);
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(nextProps) {
         // reset imageCacheManager in case any option changed
         this.imageCacheManager = null;
         // preload new images if needed
